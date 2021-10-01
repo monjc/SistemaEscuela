@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoprueba.GestionAcudienteController">
+   <children>
+      <Button layoutX="319.0" layoutY="48.0" mnemonicParsing="false" text="Agregar" />
+      <Button layoutX="396.0" layoutY="48.0" mnemonicParsing="false" text="Visualizar" />
+      <Button layoutX="495.0" layoutY="48.0" mnemonicParsing="false" text="Editar" />
+      <Label layoutX="43.0" layoutY="52.0" text="Gestión de Acudientes" />
+      <TableView fx:id="tablaAcudientes" layoutX="43.0" layoutY="100.0" prefHeight="252.0" prefWidth="504.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Alumno" />
+          <TableColumn prefWidth="75.0" text="Nombre" />
+            <TableColumn prefWidth="75.0" text="RFC" />
+            <TableColumn prefWidth="75.0" text="Teléfono" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
