@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="container" prefHeight="400.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="297.0" layoutY="30.0" text="Menú principal">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="342.0" layoutY="86.0" mnemonicParsing="false" onAction="#avanzarMenuEstudiante" prefHeight="46.0" prefWidth="77.0" text="Estudiantes" />
+        <Button layoutX="342.0" layoutY="163.0" mnemonicParsing="false" onAction="#avanzarMenuOrigenes" prefHeight="46.0" prefWidth="77.0" text="Origenes" />
+        <Button layoutX="342.0" layoutY="251.0" mnemonicParsing="false" onAction="#avanzarMenuColegios" prefHeight="46.0" prefWidth="77.0" text="Colegios" />
+        <Button layoutX="484.0" layoutY="200.0" mnemonicParsing="false" onAction="#avanzarMenuHistoriales" prefHeight="46.0" prefWidth="77.0" text="Historiales" />
+        <Button layoutX="334.0" layoutY="334.0" mnemonicParsing="false" onAction="#avanzarMenuInfoMedica" prefHeight="46.0" prefWidth="94.0" text="Info Médica" />
+        <Button layoutX="192.0" layoutY="200.0" mnemonicParsing="false" onAction="#avanzarMenuAcudientes" prefHeight="46.0" prefWidth="77.0" text="Acudientes" />
+    </children>
+</AnchorPane>

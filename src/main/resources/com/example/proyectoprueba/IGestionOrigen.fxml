@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="275.0" layoutY="14.0" text="Gestión de Origen">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="88.0" layoutY="287.0" mnemonicParsing="false" onAction="#registrarOrigen" text="Registrar" />
+        <ComboBox fx:id="comboAlumno" layoutX="19.0" layoutY="112.0" prefHeight="25.0" prefWidth="202.0" promptText="Alumno" />
+        <TextField fx:id="txtDepartamento" layoutX="19.0" layoutY="175.0" prefHeight="25.0" prefWidth="202.0" />
+        <TextField fx:id="txtCiudad" layoutX="19.0" layoutY="232.0" prefHeight="25.0" prefWidth="202.0" />
+        <Label layoutX="19.0" layoutY="150.0" text="Departamento">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="19.0" layoutY="207.0" text="Ciudad">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="87.0" text="Alumno">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tablaOrigen" layoutX="248.0" layoutY="107.0" prefHeight="238.0" prefWidth="494.0">
+            <columns>
+                <TableColumn fx:id="columnaAlumno" prefWidth="131.0" text="Alumno" />
+                <TableColumn fx:id="columnaDepto" prefWidth="178.0" text="Departamento" />
+                <TableColumn fx:id="columnaCiudad" prefWidth="184.0" text="Ciudad" />
+            </columns>
+        </TableView>
+        <Button layoutX="459.0" layoutY="361.0" mnemonicParsing="false" onAction="#eliminarOrigen" text="Eliminar" />
+        <Button layoutX="17.0" layoutY="20.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" text="Regresar" />
+    </children>
+</AnchorPane>
