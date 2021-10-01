@@ -16,7 +16,7 @@ public class AcudienteDAO implements IAcudienteDAO {
     @Override
     public void guardarAcudiente(Acudiente acudiente) {
         try (Connection conexion = PostgreConexion.getConexion()){
-            String consulta = "Insert into public.\"Origen\" (\"idAlumno\", rfcAcudiente, nombreAcudiente, telefono, activo) values (?,?,?,?,?);";
+            String consulta = "Insert into public.\"Acudiente\" (\"idAlumno\", rfcAcudiente, nombreAcudiente, telefono, activo) values (?,?,?,?,?);";
             PreparedStatement sentence = conexion.prepareStatement(consulta);
             sentence.setInt(1, acudiente.getIdAlumno());
             sentence.setString(2, acudiente.getRfcAcudiente());
@@ -48,7 +48,7 @@ public class AcudienteDAO implements IAcudienteDAO {
 
     public static List<Acudiente> getTablaOrigen() {
         Connection connection = PostgreConexion.getConexion();
-        List<Acudiente> origenes = new ArrayList<>();
+        List<Acudiente> acudientes = new ArrayList<>();
         String consulta = "SELECT CONCAT(a.\"primerNombre\", ' ', a.\"segundoNombre\", ' ', a.\"apellidoPaterno\", ' ', a.\"apellidoMaterno\") AS nombreCompleto, " +
                 "\"idAcudiente\", public.\"Acudiente\".\"idAlumno\", rfcAcudiente, nombreAcudiente, telefono, public.\"Acudiente\".activo FROM public.\"Acudiente\" " +
                 "LEFT JOIN public.\"Alumno\" a ON public.\"Acudiente\".\"idAlumno\" = a.\"idAlumno\" WHERE public.\"Acudiente\".activo = true;";
@@ -64,11 +64,12 @@ public class AcudienteDAO implements IAcudienteDAO {
                 acudienteDao.setRfcAcudiente(queryResult.getString("rcfAcudiente"));
                 acudienteDao.setNombreAcudiente(queryResult.getString("nombreAcudiente"));
                 acudienteDao.setTelefono(queryResult.getString("telefono"));
-                origenes.add(acudienteDao);
+                acudienteDao.setNombreCompletoAlumno(queryResult.getString("nombreCompleto"));
+                acudientes.add(acudienteDao);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return origenes;
+        return acudientes;
     }
 }

@@ -6,11 +6,9 @@ public class Acudiente {
     private String rfcAcudiente;
     private String nombreAcudiente;
     private String telefono;
-    private boolean activo;
+    private String nombreCompletoAlumno;
 
-    public int getIdAcudiente() {
-        return idAcudiente;
-    }
+    public int getAcudiente(){return idAcudiente;}
 
     public void setIdAcudiente(int idAcudiente) {
         this.idAcudiente = idAcudiente;
@@ -48,11 +46,7 @@ public class Acudiente {
         this.telefono = telefono;
     }
 
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
+    public void setNombreCompletoAlumno(String nombreCompletoAlumno) {
+        this.nombreCompletoAlumno = nombreCompletoAlumno;
     }
 }

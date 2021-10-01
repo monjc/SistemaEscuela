@@ -6,7 +6,7 @@ public class HistoriaAcademica {
     private String colegioAnterior;
     private String año;
     private String grado;
-    private boolean activo;
+    private String nombreCompletoAlumno;
 
     public int getIdHistoriaAcademica() {
         return idHistoriaAcademica;
@@ -48,12 +48,7 @@ public class HistoriaAcademica {
         this.grado = grado;
     }
 
-    public boolean isActivo() {
-        return activo;
+    public void setNombreCompletoAlumno(String nombreCompletoAlumno) {
+        this.nombreCompletoAlumno = nombreCompletoAlumno;
     }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
-    }
-
 }
